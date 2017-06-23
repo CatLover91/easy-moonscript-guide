@@ -14,3 +14,17 @@ expand on -> moonscript is just coffeescript for lua
 ## Lapis
 * what is lapis
 * ez lapis structure
+** lapis new --tup
+** touch config.moon
+```
+-- config.moon
+config = require "lapis.config"
+
+config "development", ->
+  port 8080
+
+config "production", ->
+  port 80
+  num_workers 4
+  code_cache "on"
+```
